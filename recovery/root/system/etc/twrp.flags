@@ -41,5 +41,5 @@ odm                 /odm         erofs       ro                                 
 /keydata            ext4         /dev/block/bootdevice/by-name/keydata           flags=display="Keydata";wipeingui
 /keyrefuge          ext4         /dev/block/bootdevice/by-name/keyrefuge         flags=display="Keyrefuge";wipeingui
 
-# SD Card & USB-OTG Points
-/usb-otg	        vfat		 /dev/block/sdg1	   /dev/block/sdg			 flags=display="USB-OTG";storage;wipeingui;removable
+# USB-OTG Points
+/usb-otg	        vfat		 /dev/block/sde1	/dev/block/sde			     flags=display="USB-OTG";storage;wipeingui;removable
