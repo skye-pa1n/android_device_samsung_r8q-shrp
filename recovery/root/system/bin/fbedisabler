@@ -14,18 +14,18 @@
 #
 
 check_fbe() {
-  local fbe_ver=$(grep -m1 "fileencryption=ice" "/tmp/vendor/etc/fstab.qcom")
+  local fbe_ver=$(grep -o -m1 "fileencryption=ice" "/tmp/vendor/etc/fstab.qcom")
   if [ "$fbe_ver" = "fileencryption=ice" ]; then
-      echo " - FBE V1 detected"
-      disable_fbe_v1
+      echo " - file-based encryption detected"
+      disable_fbe
   else
-      echo " - FBE V1 not detected. Aborting..."
+      echo " - file-based encryption not detected. Aborting..."
   fi
 }
 
-disable_fbe_v1() {
-      echo " - Disabling file-based encryption (FBE V1) for /data..."
-      sed -i '0,/fileencryption=ice/s/fileencryption=ice/encryptable/' "/tmp/vendor/etc/fstab.qcom"
+disable_fbe() {
+      echo " - Disabling file-based encryption for /data..."
+      sed -i 's/fileencryption=ice/encryptable/' "/tmp/vendor/etc/fstab.qcom"
       echo " - Formatting /data partition"
       twrp format data
       echo " - Done"
@@ -40,7 +40,7 @@ blockdev --setrw "/dev/block/mapper/vendor";
 mount -w "/dev/block/mapper/vendor" "/tmp/vendor";
 
 echo " - Decrypting..."
-echo " - Warning: This process will wipe your entire /data partition. Type yes to continue, or anything else to abort."
+echo " - Warning: This process will wipe your entire /data partition. Type "yes" to continue, or anything else to abort."
 
 read accept
 
