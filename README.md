@@ -55,7 +55,7 @@ cd shrp
 ```
 
 ```
-repo init -u https://github.com/SHRP/manifest.git -b shrp-12.1
+repo init --depth=1 -u https://github.com/SHRP/manifest.git -b shrp-12.1
 repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
 ```
 
