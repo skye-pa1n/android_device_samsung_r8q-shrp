@@ -48,3 +48,20 @@ There is also a 4G variant that is released with Android 11 in April 2021
 # limitations under the License.
 #
 ```
+### Personal notes
+```
+mkdir shrp
+cd shrp
+```
+
+```
+repo init -u https://github.com/SHRP/manifest.git -b shrp-12.1
+repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
+```
+
+```
+export ALLOW_MISSING_DEPENDENCIES=true
+. build/envsetup.sh
+lunch twrp_r8q-eng
+mka recoveryimage
+```
