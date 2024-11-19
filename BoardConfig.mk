@@ -144,3 +144,33 @@ TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_RESETPROP := true
+
+# SHRP Configs
+SHRP_DEVICE_CODE := r8q
+SHRP_PATH := device/samsung/r8q
+SHRP_MAINTAINER := skye//pa1n
+SHRP_REC_TYPE := SAR
+SHRP_DEVICE_TYPE := A_Only
+SHRP_REC := /dev/block/bootdevice/by-name/recovery
+SHRP_HAS_RECOVERY_PARTITION := true
+SHRP_EDL_MODE := 0
+# We dont have acess to /data on AOSP & Etc
+SHRP_INTERNAL := /cache
+SHRP_EXTERNAL := /external_sd
+SHRP_OTG := /usb_otg
+SHRP_FLASH := 1
+# SHRP Theming
+SHRP_NOTCH := true
+SHRP_DARK := true
+# Custom led paths for flashlight (Yes, idk which one actually works so i put all of them)
+SHRP_CUSTOM_FLASHLIGHT := true
+SHRP_FONP_1 := /sys/class/leds/led:torch_0/brightness
+SHRP_FONP_2 := /sys/class/leds/led:torch_1/brightness
+SHRP_FONP_3 := /sys/class/leds/led:flash_0/brightness
+SHRP_FONP_4 := /sys/class/leds/led:flash_1/brightness
+SHRP_FONP_5 := /sys/class/leds/led:switch_0/brightness
+SHRP_FONP_6 := /sys/class/leds/led:switch_1/brightness
+SHRP_FONP_7 := /sys/class/leds/led:switch_2/brightness
+SHRP_FONP_8 := /sys/class/leds/led:switch_3/brightness
+# Breh
+SHRP_FLASH_MAX_BRIGHTNESS := 500
