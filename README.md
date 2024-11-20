@@ -1,4 +1,4 @@
-# SHRP Device Tree for Samsung Galaxy S20 FE 5G (Based on Official TWRP tree)
+# SHRP-Reborn Device Tree for Samsung Galaxy S20 FE 5G (Based on Official TWRP tree)
 
 The Galaxy S20 FE 5G (codenamed _"r8q"_) is an flagship-range smartphone from Samsung.
 
@@ -56,7 +56,7 @@ cd shrp
 ```
 - Init & Sync Repo
 ```
-repo init --depth=1 -u https://github.com/SHRP/manifest.git -b shrp-12.1
+repo init --depth=1 -u https://github.com/SHRP-Reborn/manifest.git -b shrp-12.1
 repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
 ```
 - Clone the manifest needed for building for the S20 FE (r8q)
