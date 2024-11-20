@@ -158,15 +158,9 @@ SHRP_EDL_MODE := 1
 SHRP_INTERNAL := /sdcard
 SHRP_EXTERNAL := /external_sd
 SHRP_OTG := /usb_otg
+# Flashlight
 SHRP_FLASH := 1
+SHRP_FLASH_MAX_BRIGHTNESS := 255
 # SHRP Theming
 SHRP_NOTCH := true
 SHRP_DARK := true
-# Custom led paths for flashlight (Yes, idk which one actually works so i put all of them)
-SHRP_CUSTOM_FLASHLIGHT := true
-SHRP_FONP_1 := /sys/class/leds/led:torch_0/brightness
-SHRP_FONP_2 := /sys/class/leds/led:torch_1/brightness
-SHRP_FONP_3 := /sys/class/leds/led:switch_0/brightness
-
-# Breh
-SHRP_FLASH_MAX_BRIGHTNESS := 1500
