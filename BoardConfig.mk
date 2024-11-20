@@ -160,6 +160,7 @@ SHRP_EXTERNAL := /external_sd
 SHRP_OTG := /usb_otg
 # Flashlight
 SHRP_FLASH := 1
+SHRP_CUSTOM_FLASHLIGHT := true
 SHRP_FONP_1 := /system/bin/flashlight
 SHRP_FLASH_MAX_BRIGHTNESS := 255
 # SHRP Theming
