@@ -1,4 +1,4 @@
-# TWRP Device Tree for Samsung Galaxy S20 FE 5G
+# SHRP Device Tree for Samsung Galaxy S20 FE 5G (Based on Official TWRP tree)
 
 The Galaxy S20 FE 5G (codenamed _"r8q"_) is an flagship-range smartphone from Samsung.
 
@@ -48,21 +48,26 @@ There is also a 4G variant that is released with Android 11 in April 2021
 # limitations under the License.
 #
 ```
-### Personal notes
+## Extremely simple instructions for building SHRP
+- Create a directory for SHRP source
 ```
 mkdir shrp
 cd shrp
 ```
-
+- Init & Sync Repo
 ```
 repo init --depth=1 -u https://github.com/SHRP/manifest.git -b shrp-12.1
 repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
+```
+- Clone the manifest needed for building for the S20 FE (r8q)
+```
 git clone https://github.com/skye-pa1n/android_device_samsung_r8q-shrp.git -b android-12.1 ./device/samsung/r8q
 ```
-
+- Build
 ```
 export ALLOW_MISSING_DEPENDENCIES=true
 . build/envsetup.sh
 lunch twrp_r8q-eng
 mka recoveryimage
 ```
+- Enjoy!!!
