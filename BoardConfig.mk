@@ -148,7 +148,7 @@ TW_INCLUDE_RESETPROP := true
 ## SHRP specific build flags
 SHRP_DEVICE_CODE := r8q
 SHRP_PATH := device/samsung/r8q
-SHRP_MAINTAINER := skye//pa1n
+SHRP_MAINTAINER := skyepa1n
 SHRP_REC_TYPE := SAR
 SHRP_DEVICE_TYPE := A_Only
 SHRP_REC := /dev/block/bootdevice/by-name/recovery
@@ -161,8 +161,8 @@ SHRP_OTG := /usb_otg
 # Flashlight
 SHRP_FLASH := 1
 SHRP_CUSTOM_FLASHLIGHT := true
-SHRP_FONP_1 := /system/bin/flashlight
-SHRP_FLASH_MAX_BRIGHTNESS := 255
+SHRP_FONP_1 := /sys/devices/virtual/camera/flash/rear_flash
+SHRP_FLASH_MAX_BRIGHTNESS := 1
 # SHRP Theming
 SHRP_NOTCH := true
 SHRP_DARK := true
