@@ -62,7 +62,7 @@ repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
 - Clone the manifest needed for building for the S20 FE (r8q)
 ```
 rm -rf ./device/samsung/r8q
-git clone https://github.com/skye-pa1n/android_device_samsung_r8q-shrp.git -b android-12.1 ./device/samsung/r8q
+git clone https://github.com/skye-pa1n/android_device_samsung_r8q-shrp.git --depth=1 -b android-12.1 ./device/samsung/r8q
 ```
 - Build
 ```
