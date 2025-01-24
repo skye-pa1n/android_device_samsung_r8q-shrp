@@ -18,7 +18,7 @@ TARGET_2ND_ARCH_VARIANT := armv8-2a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := $(TARGET_CPU_VARIANT)
-TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
+TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a75
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := $(PRODUCT_PLATFORM)
@@ -148,7 +148,7 @@ TW_INCLUDE_RESETPROP := true
 ## SHRP specific build flags
 SHRP_DEVICE_CODE := r8q
 SHRP_PATH := device/samsung/r8q
-SHRP_MAINTAINER := skyepa1n
+SHRP_MAINTAINER := skye//pa1n
 SHRP_REC_TYPE := SAR
 SHRP_DEVICE_TYPE := A_Only
 SHRP_REC := /dev/block/bootdevice/by-name/recovery
@@ -158,11 +158,15 @@ SHRP_EDL_MODE := 1
 SHRP_INTERNAL := /sdcard
 SHRP_EXTERNAL := /external_sd
 SHRP_OTG := /usb_otg
-# Flashlight
 SHRP_FLASH := 1
-SHRP_CUSTOM_FLASHLIGHT := true
-SHRP_FONP_1 := /sys/devices/virtual/camera/flash/rear_flash
-SHRP_FLASH_MAX_BRIGHTNESS := 1
 # SHRP Theming
 SHRP_NOTCH := true
 SHRP_DARK := true
+# Custom led paths for flashlight (Yes, idk which one actually works so i put all of them)
+SHRP_CUSTOM_FLASHLIGHT := true
+SHRP_FONP_1 := /sys/class/leds/led:torch_0/brightness
+SHRP_FONP_2 := /sys/class/leds/led:torch_1/brightness
+SHRP_FONP_3 := /sys/class/leds/led:switch_0/brightness
+
+# Breh
+SHRP_FLASH_MAX_BRIGHTNESS := 1500
